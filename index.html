@@ -22,7 +22,7 @@
         <header>
             <h1>Lista de Compras</h1>
         </header>
-        <form action="" id="todo-form">
+        <form action="" id="todo-form" onsubmit="return false">
             <p>Adicione a seu item</p>
             <div class="form-control">
                 <input type="text" name="" id="todo-input" placeholder="O que você vai comprar?">
@@ -31,7 +31,7 @@
                 </button>
         </form>
     </div>
-    <form id="edit-form" class="hide">
+    <form id="edit-form" class="hide" onsubmit="return false">
         <p>Edite a seu item:</p>
         <div class="form-control">
             <input type="text" name="" id="edit-input">
@@ -45,7 +45,7 @@
     <div id="toolbar">
         <div id="search">
             <h4>Pesquisar:</h4>
-            <form action="">
+            <form action="" onsubmit="return false">
                 <input type="text" name="" id="search-input" placeholder="Buscar">
                 <button id="erase-button">
                     <i class="fa-solid fa-delete-left"></i>
