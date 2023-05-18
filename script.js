@@ -14,6 +14,9 @@ let oldInputValue;
 let saveDoneList = [];
 let saveTodoList = [];
 
+localStorage.setItem("saveDoneList", JSON.stringify([]));
+localStorage.setItem("saveTodoList", JSON.stringify([]));
+
 // Funções
 const saveTodo = (text) => {
   const todo = document.createElement("div");
@@ -99,7 +102,6 @@ const save = () => {
     if (saveTodo[i].classList[1] === "done") {
     } else {
       saveTodoList.push(saveTodo[i].children[0].innerText);
-      // console.log(saveTodo[i].children[0].innerText);
     }
   }
   localStorage.setItem("saveDoneList", JSON.stringify(saveDoneList));
