@@ -14,9 +14,6 @@ let oldInputValue;
 let saveDoneList = [];
 let saveTodoList = [];
 
-localStorage.setItem("saveDoneList", JSON.stringify([]));
-localStorage.setItem("saveTodoList", JSON.stringify([]));
-
 // Funções
 const saveTodo = (text) => {
   const todo = document.createElement("div");
@@ -143,7 +140,13 @@ const retorno = () => {
   });
 };
 
-retorno();
+if (
+  !localStorage.getItem("saveTodoList") &&
+  !localStorage.getItem("saveDoneList")
+) {
+} else {
+  retorno();
+}
 
 // Filtro por nome
 
